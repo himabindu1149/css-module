@@ -1,0 +1,6 @@
+* {
+  --error-color: red;
+}
+.error {
+  color: purple;
+}

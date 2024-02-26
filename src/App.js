@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import Product from './components/Product';
+import { ProductData } from './content';
+import app_styles from '../src/styles/App.module.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1> Trending Gadgets</h1>
+      <h3 className={app_styles.error}>An error occured</h3>
+      <div className="App">
+        {ProductData.map((product) => (
+          <Product data={product} />
+        ))}
+      </div>
+    </>
   );
 }
 
